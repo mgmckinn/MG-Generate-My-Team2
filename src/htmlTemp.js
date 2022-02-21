@@ -16,15 +16,16 @@ const generateHTML = function(teamString) {
 
 </head>
 
+</head>
+<header class="header">
+    <div class="jumbotron section bg-success">
+        <h1 class="display-5 text-blue text-center">My Team</h1>
+    </div>
+</header>
+
+
 <body>
-
-<div class="header">
-<div class="jumbotron bg-danger">
-   <h1 class="display-4 text-white text-center">My Team</h1>
-</div>
-</div>
-
-<div class="container-body container-fluid">
+<main class="container-body container-fluid">
    <div class="row">
         ${teamString} 
     </div>
@@ -45,13 +46,13 @@ const generateCard = function(arr) {
     let roleInfo;
 
     if (arr.title === "Manager") {
-        positionIcon = `<i class="fas fa-mug-hot"></i>`
+        positionIcon = `<i class="fa-duotone fa-briefcase"></i>`
         roleInfo = `Office Number: ${arr.officeNumber}`
     } else if (arr.title === "Engineer") {
-        positionIcon = `<i class="fas fa-glasses"></i>`
+        positionIcon = `<i class="fa-duotone fa-helmet-safety"></i>`
         roleInfo = `GitHub Username: <a href="https://github.com/${arr.github}" target="_blank">${arr.github}</a>`
     } else if (arr.title === "Intern") {
-        positionIcon = `<i class="fas fa-user-graduate"></i>`
+        positionIcon = `<i class="fa-solid fa-screen-users"></i>`
         roleInfo = `School: ${arr.school}`
     }
 
@@ -65,7 +66,7 @@ const generateCard = function(arr) {
         </div>
 
         <div class="card-body">
-            <ul class="list-unstyled">
+            <ul>
                 <li>Employee ID: ${arr.id}</li>
                 <li>Email: <a href="mailto:${arr.email}">${arr.email}</a></li>
                 <li>${roleInfo}</li>
