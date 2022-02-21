@@ -17,6 +17,7 @@
         "inquirer": "^8.2.0",
         "install": "^0.13.0",
         "node": "^17.4.0",
+        "util": "^0.12.4",
         "yarn": "^1.22.17"
     },
     "devDependencies": {
