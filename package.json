@@ -1,0 +1,49 @@
+{
+    "name": "rpg",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "jest",
+        "build": "postcss css/styles.css -o build/styles.css"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "email-validator": "^2.0.4",
+        "inquirer": "^8.2.0",
+        "install": "^0.13.0",
+        "node": "^17.4.0",
+        "yarn": "^1.22.17"
+    },
+    "devDependencies": {
+        "jest": "^27.5.1",
+        "tailwindcss": "^3.0.22"
+    },
+    "presets": [
+        [
+            "es2015",
+            {
+                "modules": false
+            }
+        ],
+        "react",
+        "stage-0"
+    ],
+    "env": {
+        "start": {
+            "presets": [
+                "react-hmre"
+            ]
+        },
+        "test": {
+            "presets": [
+                "es2015",
+                "react",
+                "stage-0"
+            ]
+        }
+    }
+}
