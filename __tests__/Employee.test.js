@@ -1,4 +1,4 @@
-const Employee = require('../lib/Employee');
+const Employee = require('../lib/Employee')
 
 test("create new employee", () => {
     const employee = new Employee("Sarah", 25, "example@example.com");
@@ -16,8 +16,7 @@ test("get employee id", () => {
 
 test("get employee email", () => {
     const employee = new Employee("Sarah", 25, "staff@example.com");
-    expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString())
-    );
+    expect(employee.getEmail()).toEqual(expect.stringContaining(employee.email.toString()));
 });
 
 test("get employee role", () => {
